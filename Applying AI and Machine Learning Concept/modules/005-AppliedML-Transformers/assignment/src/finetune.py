@@ -1,7 +1,7 @@
 """
 Transfer learning and fine-tuning conceptual exercises.
 
-Students demonstrate understanding of architecture selection,
+Associates demonstrate understanding of architecture selection,
 pipeline design, training strategies, and computational complexity
 for fine-tuning pre-trained transformer models.
 No deep learning frameworks are required.

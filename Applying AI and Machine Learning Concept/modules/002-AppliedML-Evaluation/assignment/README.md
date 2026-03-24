@@ -34,7 +34,7 @@ By the end of this assignment you will be able to:
 
 ## Prerequisites
 
-Students should have completed the readings, videos, and live lecture covering:
+Associates should have completed the readings, videos, and live lecture covering:
 
 1. Train, Validation, and Test Splits (stratified k-fold)
 2. Loss Functions: MSE and CrossEntropy

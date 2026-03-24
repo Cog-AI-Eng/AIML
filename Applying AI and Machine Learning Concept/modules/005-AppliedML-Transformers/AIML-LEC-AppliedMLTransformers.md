@@ -3,13 +3,13 @@
 **Activity Type:** Lecture / Conceptual Live Demo  
 **Duration:** 180 minutes (3 hours)  
 **Module:** 005 -- Applied ML: Transformers  
-**Prerequisites:** Students have completed pre-class readings and videos on attention mechanisms, transformer architecture, BERT/GPT/T5 use cases, and transfer learning.
+**Prerequisites:** Associates have completed pre-class readings and videos on attention mechanisms, transformer architecture, BERT/GPT/T5 use cases, and transfer learning.
 
 ---
 
 ## Learning Objectives
 
-By the end of this lecture, students will be able to:
+By the end of this lecture, Associates will be able to:
 
 1. Explain scaled dot-product attention and why scaling is necessary.
 2. Explain positional encoding and why transformers need it.
@@ -31,7 +31,7 @@ By the end of this lecture, students will be able to:
 | matplotlib | latest stable |
 | Whiteboard / Slides | For diagrams and pseudocode walkthroughs |
 
-> **Note:** This lecture is framework-agnostic. All model-building and fine-tuning concepts are presented as pseudocode and math notation so students learn the underlying principles independent of any specific library.
+> **Note:** This lecture is framework-agnostic. All model-building and fine-tuning concepts are presented as pseudocode and math notation so Associates learn the underlying principles independent of any specific library.
 
 ---
 
@@ -48,7 +48,7 @@ By the end of this lecture, students will be able to:
 
 ## Scenario
 
-Students will study an **NLP pipeline** across three conceptual stages. In Stage 1 they work through attention and transformer components from first principles using math and pseudocode. In Stage 2 they explore pre-trained model architectures (BERT, GPT, T5), comparing their design choices, pre-training objectives, and strengths. In Stage 3 they walk through a full transfer learning pipeline for binary sentiment classification, understanding each step conceptually before ever touching a specific framework.
+Associates will study an **NLP pipeline** across three conceptual stages. In Stage 1 they work through attention and transformer components from first principles using math and pseudocode. In Stage 2 they explore pre-trained model architectures (BERT, GPT, T5), comparing their design choices, pre-training objectives, and strengths. In Stage 3 they walk through a full transfer learning pipeline for binary sentiment classification, understanding each step conceptually before ever touching a specific framework.
 
 ---
 
@@ -61,7 +61,7 @@ Students will study an **NLP pipeline** across three conceptual stages. In Stage
 | `lecture/stage-2-pretrained` | Completed Stage 2 architecture comparison notes |
 | `lecture/stage-3-finetune` | Completed Stage 3 pipeline walkthrough (final) |
 
-Students should check out `lecture/stage-0-starter` at the start. At the end of each stage the instructor can show the corresponding branch as a reference checkpoint.
+Associates should check out `lecture/stage-0-starter` at the start. At the end of each stage the instructor can show the corresponding branch as a reference checkpoint.
 
 ---
 
@@ -364,7 +364,7 @@ Key points:
 
 **[BREAK -- 5 min]**
 
-> Students should review all Stage 1 material. Check out `lecture/stage-1-attention` if behind.
+> Associates should review all Stage 1 material. Check out `lecture/stage-1-attention` if behind.
 
 ---
 
@@ -630,7 +630,7 @@ Narrate:
 
 **[BREAK -- 5 min]**
 
-> Students should review Stage 2 architecture comparisons. Check out `lecture/stage-2-pretrained` if behind.
+> Associates should review Stage 2 architecture comparisons. Check out `lecture/stage-2-pretrained` if behind.
 
 ---
 
@@ -962,7 +962,7 @@ Key concepts:
 
 ## Git Activity
 
-Have students:
+Have Associates:
 1. Check out `lecture/stage-3-finetune` to see the complete reference materials.
 2. Create a personal branch `student/<name>/transformers` to try their own conceptual exercises and explorations.
 

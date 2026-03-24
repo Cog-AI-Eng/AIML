@@ -1,7 +1,7 @@
 """
 Scaled dot-product attention computation using NumPy.
 
-Students must implement the softmax function and the full attention
+Associates must implement the softmax function and the full attention
 pipeline using only NumPy -- no deep learning frameworks allowed.
 """
 

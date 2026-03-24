@@ -1,7 +1,7 @@
 """
 Transformer architecture conceptual exercises.
 
-Students answer questions about multi-head attention dimensions,
+Associates answer questions about multi-head attention dimensions,
 positional encoding computation, and parameter counting using
 NumPy and pure Python -- no deep learning frameworks required.
 """

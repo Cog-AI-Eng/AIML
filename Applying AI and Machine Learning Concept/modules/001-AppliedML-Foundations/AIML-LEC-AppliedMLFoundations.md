@@ -17,14 +17,14 @@
 
 **Unified Scenario -- TalentFlow HR Analytics**
 
-Students will play the role of a data scientist at a fictional company called TalentFlow, which is experiencing high employee turnover. Leadership has asked two questions:
+Associates will play the role of a data scientist at a fictional company called TalentFlow, which is experiencing high employee turnover. Leadership has asked two questions:
 
 1. **"Can we predict an employee's monthly income based on their profile?"** (Regression -- continuous target)
 2. **"Can we predict which employees are likely to leave?"** (Classification -- binary target)
 
-This single scenario threads through every exit criterion: students will walk the ML lifecycle end-to-end, enforce reproducibility, distinguish supervised from unsupervised paradigms, build both Linear and Logistic Regression models, and apply the algorithm selection framework to justify their choices. A brief unsupervised clustering segment shows how the same data supports a different paradigm when labels are removed.
+This single scenario threads through every exit criterion: Associates will walk the ML lifecycle end-to-end, enforce reproducibility, distinguish supervised from unsupervised paradigms, build both Linear and Logistic Regression models, and apply the algorithm selection framework to justify their choices. A brief unsupervised clustering segment shows how the same data supports a different paradigm when labels are removed.
 
-**Why a synthetic dataset?** The lecture generates data inline with NumPy so there are zero download dependencies, every student sees identical numbers, and the instructor controls exactly which patterns appear. This also reinforces the reproducibility lesson because students can verify that their outputs match the instructor's.
+**Why a synthetic dataset?** The lecture generates data inline with NumPy so there are zero download dependencies, every student sees identical numbers, and the instructor controls exactly which patterns appear. This also reinforces the reproducibility lesson because Associates can verify that their outputs match the instructor's.
 
 ---
 
@@ -100,7 +100,7 @@ print(f"pandas version: {pd.__version__}")
 
 ### STEP 2 -- Data Ingestion: Generating the TalentFlow Dataset (10 minutes)
 
-**Pacing: block update.** Paste the full generation block, then walk through it section by section after execution. Students should see the output first, then understand how it was built.
+**Pacing: block update.** Paste the full generation block, then walk through it section by section after execution. Associates should see the output first, then understand how it was built.
 
 ```python
 # STEP 2: Data ingestion -- generate synthetic TalentFlow HR dataset
@@ -151,7 +151,7 @@ df.head(10)
 
 - The income formula is intentionally linear with noise -- this is why Linear Regression will work well here.
 - The attrition labels are generated through a logistic function -- this is why Logistic Regression is a natural fit.
-- Both relationships are *designed* so students see strong results, building confidence before they face messy real-world data.
+- Both relationships are *designed* so Associates see strong results, building confidence before they face messy real-world data.
 - Point out the class balance in attrition. If it is imbalanced, discuss why accuracy alone would be misleading.
 
 > "In a real project, this step would be loading CSVs, querying a database, or pulling from an API. The lifecycle stage is the same: bring data into a controlled environment where you can inspect it."
@@ -185,7 +185,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-**Instructor Note:** Ask students: *"What do you notice about Engineering versus the other departments?"* The synthetic data has a 5000 bump for Engineering. This is a feature engineering insight they will use later.
+**Instructor Note:** Ask Associates: *"What do you notice about Engineering versus the other departments?"* The synthetic data has a 5000 bump for Engineering. This is a feature engineering insight they will use later.
 
 ```python
 # STEP 3c: Distribution of the binary target (attrition)
@@ -338,7 +338,7 @@ print(coeff_df.to_string(index=False))
 print(f"\nIntercept: {lr_model.intercept_:.2f}")
 ```
 
-**Instructor Note:** Since features are standardized, coefficient magnitudes are directly comparable. Walk through which features have the strongest positive and negative effects. Connect back to the data generation formula -- students should see that `years_at_company`, `age`, and `num_projects` have large positive coefficients, matching how we built the data.
+**Instructor Note:** Since features are standardized, coefficient magnitudes are directly comparable. Walk through which features have the strongest positive and negative effects. Connect back to the data generation formula -- Associates should see that `years_at_company`, `age`, and `num_projects` have large positive coefficients, matching how we built the data.
 
 ```python
 # STEP 5c: Residual analysis
@@ -478,7 +478,7 @@ plt.show()
 
 ### STEP 7 -- Baseline Comparison: DummyClassifier (10 minutes)
 
-**Pacing: line-by-line.** This is a pivotal concept. Let students absorb each comparison.
+**Pacing: line-by-line.** This is a pivotal concept. Let Associates absorb each comparison.
 
 ```python
 # STEP 7a: Build a DummyClassifier baseline
@@ -710,13 +710,13 @@ git branch
 git checkout main
 ```
 
-**Instructor Note:** If time allows, have students create their own branch named `experiment/<their-initials>-feature-test` and commit a small change (for example, changing the number of KMeans clusters to 4). This is the Git branch activity.
+**Instructor Note:** If time allows, have Associates create their own branch named `experiment/<their-initials>-feature-test` and commit a small change (for example, changing the number of KMeans clusters to 4). This is the Git branch activity.
 
 ---
 
 ## Git Branch Activity (Remaining Buffer Time)
 
-**Instructions to give students verbally or in a shared message:**
+**Instructions to give Associates verbally or in a shared message:**
 
 > "Here is your mini-activity for the remaining time. Do the following in order:"
 
@@ -769,7 +769,7 @@ Use this checklist to verify all required exit criteria were demonstrated during
 
 **Common student questions and suggested responses:**
 
-- *"Why did we not include the department column?"* -- Encoding categorical variables is a valid next step. The decision to start numeric-only was intentional: it keeps the first pass simple and gives students a clear upgrade path for the assignment.
+- *"Why did we not include the department column?"* -- Encoding categorical variables is a valid next step. The decision to start numeric-only was intentional: it keeps the first pass simple and gives Associates a clear upgrade path for the assignment.
 
 - *"Should we always use StandardScaler?"* -- No. MinMaxScaler, RobustScaler, and no scaling at all are valid depending on the algorithm and data. Linear models benefit from scaling; tree-based models generally do not need it. This is an algorithm selection consideration.
 
@@ -779,5 +779,5 @@ Use this checklist to verify all required exit criteria were demonstrated during
 
 **Post-lecture follow-up:**
 
-- Direct students to the AppliedML-Foundations Assignment where they will apply these techniques to a different dataset independently.
-- Remind students that future modules (Evaluation, Neural Networks, Deep Learning, Transformers) build on this foundation -- the lifecycle, reproducibility habits, and baseline-first thinking carry forward into every module.
+- Direct Associates to the AppliedML-Foundations Assignment where they will apply these techniques to a different dataset independently.
+- Remind Associates that future modules (Evaluation, Neural Networks, Deep Learning, Transformers) build on this foundation -- the lifecycle, reproducibility habits, and baseline-first thinking carry forward into every module.

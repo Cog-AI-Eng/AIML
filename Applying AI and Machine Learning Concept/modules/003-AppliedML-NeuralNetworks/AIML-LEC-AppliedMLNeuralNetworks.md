@@ -3,13 +3,13 @@
 **Activity Type:** Lecture / Conceptual Live Coding  
 **Duration:** 180 minutes (3 hours)  
 **Module:** 003 -- Applied ML: Neural Networks  
-**Prerequisites:** Students have completed pre-class readings and videos on perceptrons, MLPs, backpropagation, gradient descent, and optimizers.
+**Prerequisites:** Associates have completed pre-class readings and videos on perceptrons, MLPs, backpropagation, gradient descent, and optimizers.
 
 ---
 
 ## Learning Objectives
 
-By the end of this lecture, students will be able to:
+By the end of this lecture, Associates will be able to:
 
 1. Describe the biological inspiration behind the Perceptron model.
 2. Explain the vanishing gradient problem and how modern activation functions address it.
@@ -47,7 +47,7 @@ By the end of this lecture, students will be able to:
 
 ## Scenario
 
-Students will explore **image digit classification** using the sklearn digits dataset (1797 samples of 8x8 grayscale images, 10 classes). Across three stages they will design progressively more complex MLPs in pseudocode, compare optimizers conceptually, and visualize activation functions and learning dynamics -- building a deep understanding of neural network fundamentals that transfers to any framework.
+Associates will explore **image digit classification** using the sklearn digits dataset (1797 samples of 8x8 grayscale images, 10 classes). Across three stages they will design progressively more complex MLPs in pseudocode, compare optimizers conceptually, and visualize activation functions and learning dynamics -- building a deep understanding of neural network fundamentals that transfers to any framework.
 
 ---
 
@@ -60,7 +60,7 @@ Students will explore **image digit classification** using the sklearn digits da
 | `lecture/stage-2-mlp` | Completed Stage 2 code |
 | `lecture/stage-3-optimizers` | Completed Stage 3 code (final) |
 
-Students should check out `lecture/stage-0-starter` at the start. At the end of each stage the instructor can show the corresponding branch as a reference checkpoint.
+Associates should check out `lecture/stage-0-starter` at the start. At the end of each stage the instructor can show the corresponding branch as a reference checkpoint.
 
 ---
 
@@ -87,7 +87,7 @@ Students should check out `lecture/stage-0-starter` at the start. At the end of 
 
 ## STEP 1.2 -- Load and Explore the Dataset (8 min)
 
-**[PACING: Live code. Students follow along.]**
+**[PACING: Live code. Associates follow along.]**
 
 ```python
 # STEP 1.2 -- Load sklearn digits dataset
@@ -230,7 +230,7 @@ Narrate:
 
 **[BREAK -- 5 min]**
 
-> Encourage students to run the data-loading and activation-function code, experiment with plotting different activation functions, and check out `lecture/stage-1-perceptron` if they fell behind.
+> Encourage Associates to run the data-loading and activation-function code, experiment with plotting different activation functions, and check out `lecture/stage-1-perceptron` if they fell behind.
 
 ---
 
@@ -414,7 +414,7 @@ Explain why we use mini-batches rather than the full dataset:
 
 ### Expected Observations
 
-Describe what students would typically see if they trained each configuration:
+Describe what Associates would typically see if they trained each configuration:
 
 - **Wide-Shallow:** Learns quickly since one large layer has lots of capacity. But all features are learned at a single level of abstraction.
 - **Narrow-Deep:** Fewer parameters but can learn hierarchical representations. May be harder to train (vanishing gradients) and slower to converge.
@@ -423,11 +423,11 @@ Describe what students would typically see if they trained each configuration:
 
 ### Visualization (Conceptual)
 
-Describe to students what the loss and accuracy curves would look like:
+Describe to Associates what the loss and accuracy curves would look like:
 - Plot training loss over epochs for each configuration -- deeper networks may show slower initial descent.
 - Plot test accuracy -- very deep networks may overfit (training accuracy high, test accuracy plateaus or drops).
 
-**Exercise:** Have students calculate the parameter count for a custom architecture of their choosing (e.g., [64, 64, 32]) and predict how it might perform relative to the configurations above.
+**Exercise:** Have Associates calculate the parameter count for a custom architecture of their choosing (e.g., [64, 64, 32]) and predict how it might perform relative to the configurations above.
 
 Discussion points:
 - Wider networks can represent more functions per layer but add parameters quadratically.
@@ -441,7 +441,7 @@ Discussion points:
 
 **[BREAK -- 5 min]**
 
-> Students should review the architecture pseudocode and parameter counts. Check out `lecture/stage-2-mlp` if behind.
+> Associates should review the architecture pseudocode and parameter counts. Check out `lecture/stage-2-mlp` if behind.
 
 ---
 
@@ -532,7 +532,7 @@ Rule of thumb: start with Adam for rapid prototyping; switch to SGD+momentum for
 
 ## STEP 3.3 -- Learning Rate Schedulers (15 min)
 
-**[PACING: Conceptual + visualization. New concept for most students.]**
+**[PACING: Conceptual + visualization. New concept for most Associates.]**
 
 ### Why Schedule the Learning Rate?
 
@@ -673,7 +673,7 @@ For this dataset (1797 samples, 64 features, 10 classes), a well-tuned MLP can r
 
 ## Git Activity
 
-Have students:
+Have Associates:
 1. Check out `lecture/stage-3-optimizers` to see the complete reference code.
 2. Create a personal branch `student/<name>/experiments` to try their own architecture/optimizer combinations.
 

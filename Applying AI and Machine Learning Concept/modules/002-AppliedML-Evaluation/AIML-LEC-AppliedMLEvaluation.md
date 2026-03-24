@@ -17,7 +17,7 @@
 - [ ] IDE or Jupyter Notebook open and tested
 - [ ] Terminal ready for Git commands at end of session
 - [ ] Display/projector configured with readable font size (14pt+ recommended)
-- [ ] Students have completed all 8 prerequisite readings/videos
+- [ ] Associates have completed all 8 prerequisite readings/videos
 
 ---
 
@@ -60,7 +60,7 @@ Welcome the class. Frame the entire session around a single real-world problem: 
 3. The model must generalize to unseen transactions, which surfaces bias-variance and overfitting concerns directly.
 4. Regulatory and business stakeholders need explanations for model decisions, motivating SHAP explainability.
 
-State the exit criteria clearly. By the end of this session, students will be able to:
+State the exit criteria clearly. By the end of this session, Associates will be able to:
 
 - Implement robust train/validation/test splitting with stratification
 - Compare MSE and CrossEntropy loss mathematically and practically
@@ -76,7 +76,7 @@ State the exit criteria clearly. By the end of this session, students will be ab
 
 ### Instructor Notes
 
-This stage builds the foundation. Students need to see the data first, understand why naive splitting can destroy rare-class representation, and then connect loss functions to the classification vs. regression distinction. Type the dataset generation code line-by-line so students follow the construction logic. The splitting and cross-validation code can be done as block updates since the sklearn API is straightforward.
+This stage builds the foundation. Associates need to see the data first, understand why naive splitting can destroy rare-class representation, and then connect loss functions to the classification vs. regression distinction. Type the dataset generation code line-by-line so Associates follow the construction logic. The splitting and cross-validation code can be done as block updates since the sklearn API is straightforward.
 
 ---
 
@@ -117,7 +117,7 @@ print(f"Class distribution:\n{df['is_fraud'].value_counts(normalize=True)}")
 
 ### STEP 2: Train / Validation / Test Split (Naive vs. Stratified)
 
-`[LINE-BY-LINE]` for the naive split. `[BLOCK-UPDATE]` for the stratified split so students can compare outputs.
+`[LINE-BY-LINE]` for the naive split. `[BLOCK-UPDATE]` for the stratified split so Associates can compare outputs.
 
 ```python
 # STEP 2a: Naive random split -- observe class distribution drift
@@ -268,7 +268,7 @@ Suggested prompts:
 
 ### Instructor Notes
 
-This stage moves from data preparation to model behavior. The key pedagogical goal is to make bias-variance tangible through learning curves -- students should be able to look at a plot and diagnose the problem. Then regularization is presented as the direct remedy. Start with sklearn (Ridge/Lasso) for classical regularization, then use framework-agnostic pseudocode for Dropout since Dropout is inherently a neural network technique and the concept matters more than any specific implementation.
+This stage moves from data preparation to model behavior. The key pedagogical goal is to make bias-variance tangible through learning curves -- Associates should be able to look at a plot and diagnose the problem. Then regularization is presented as the direct remedy. Start with sklearn (Ridge/Lasso) for classical regularization, then use framework-agnostic pseudocode for Dropout since Dropout is inherently a neural network technique and the concept matters more than any specific implementation.
 
 ---
 
@@ -398,7 +398,7 @@ print(f"\nFeatures zeroed out by Lasso: {coef_df['L1_is_zero'].sum()} / {len(fea
 
 - **L2 (Ridge)** adds `lambda * sum(w^2)` to the loss. It shrinks all coefficients toward zero but rarely makes them exactly zero. Think of it as "turn down the volume on all features."
 - **L1 (Lasso)** adds `lambda * sum(|w|)` to the loss. It drives some coefficients to exactly zero, performing automatic feature selection. Think of it as "mute irrelevant features entirely."
-- **`C` parameter:** In sklearn, `C = 1 / lambda`. Smaller C = stronger regularization. This is the inverse of the lambda in the mathematical formulation, which trips up many students.
+- **`C` parameter:** In sklearn, `C = 1 / lambda`. Smaller C = stronger regularization. This is the inverse of the lambda in the mathematical formulation, which trips up many Associates.
 - **Fraud context:** We generated 20 features but only 12 are informative. Lasso should zero out some of the 4 redundant and 4 noise features.
 
 ```python
@@ -426,7 +426,7 @@ plt.show()
 
 `[LINE-BY-LINE]` for the pseudocode. Walk through the architecture and the training/inference distinction carefully.
 
-**Instructor Note:** Dropout is inherently a neural network technique. The following pseudocode illustrates the concept without tying to any specific deep learning framework. Students should focus on *what* Dropout does and *why*, not on framework syntax.
+**Instructor Note:** Dropout is inherently a neural network technique. The following pseudocode illustrates the concept without tying to any specific deep learning framework. Associates should focus on *what* Dropout does and *why*, not on framework syntax.
 
 #### Network Architecture with Dropout
 
@@ -556,7 +556,7 @@ Suggested prompts:
 
 ### Instructor Notes
 
-This is the culmination of the session. Everything built so far supports what happens here: we train a final model on the stratified data with appropriate regularization, then evaluate it with every metric the students need to master. The SHAP and early stopping demos are marked as preferred exit criteria but are critical for demonstrating professional ML practice. Pace the precision/recall/F1 section carefully -- students often confuse the denominators.
+This is the culmination of the session. Everything built so far supports what happens here: we train a final model on the stratified data with appropriate regularization, then evaluate it with every metric the Associates need to master. The SHAP and early stopping demos are marked as preferred exit criteria but are critical for demonstrating professional ML practice. Pace the precision/recall/F1 section carefully -- Associates often confuse the denominators.
 
 ---
 
@@ -815,9 +815,9 @@ plt.show()
 
 ### STEP 13: Early Stopping (Conceptual, Framework-Agnostic) (Preferred)
 
-`[LINE-BY-LINE]` for the EarlyStopping pseudocode. This is a design pattern students should understand thoroughly, independent of any specific framework.
+`[LINE-BY-LINE]` for the EarlyStopping pseudocode. This is a design pattern Associates should understand thoroughly, independent of any specific framework.
 
-**Instructor Note:** Early Stopping is a general regularization technique applicable to any iterative learning algorithm (neural networks, gradient boosting, etc.). The following pseudocode presents the pattern in a framework-agnostic way so students understand the logic before encountering it in any specific library.
+**Instructor Note:** Early Stopping is a general regularization technique applicable to any iterative learning algorithm (neural networks, gradient boosting, etc.). The following pseudocode presents the pattern in a framework-agnostic way so Associates understand the logic before encountering it in any specific library.
 
 #### Early Stopping Logic
 
@@ -968,7 +968,7 @@ Suggested prompts:
 
 ## Closing Git Branch Activity (Final 5 min)
 
-Instruct students to commit their work to a feature branch. Walk through these commands live:
+Instruct Associates to commit their work to a feature branch. Walk through these commands live:
 
 ```bash
 # Navigate to the project directory
@@ -999,7 +999,7 @@ git commit -m "Add complete model evaluation pipeline for fraud detection
 git log --oneline -1
 ```
 
-**Instructor Note:** Remind students that their assignment branch should branch from this lecture branch so they can build on the code demonstrated today.
+**Instructor Note:** Remind Associates that their assignment branch should branch from this lecture branch so they can build on the code demonstrated today.
 
 ---
 

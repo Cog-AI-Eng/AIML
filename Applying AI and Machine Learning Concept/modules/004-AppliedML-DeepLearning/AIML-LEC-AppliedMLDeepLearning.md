@@ -3,13 +3,13 @@
 **Activity Type:** Lecture / Conceptual Workshop  
 **Duration:** 180 minutes (3 hours)  
 **Module:** 004 -- Applied ML: Deep Learning  
-**Prerequisites:** Students have completed pre-class readings and videos on CNNs, RNNs, LSTMs, GRUs, and encoder-decoder architectures. Students have built MLPs in Module 003.
+**Prerequisites:** Associates have completed pre-class readings and videos on CNNs, RNNs, LSTMs, GRUs, and encoder-decoder architectures. Associates have built MLPs in Module 003.
 
 ---
 
 ## Learning Objectives
 
-By the end of this lecture, students will be able to:
+By the end of this lecture, Associates will be able to:
 
 1. Design a CNN architecture for image classification using convolutional, pooling, and fully connected layers.
 2. Architect an RNN pipeline for sequential data processing.
@@ -32,7 +32,7 @@ By the end of this lecture, students will be able to:
 | Dataset (Stage 2) | Synthetic sentiment sequences generated inline |
 | Dataset (Stage 3) | Synthetic digit-string reversal sequences generated inline |
 
-> **Note:** All model architectures in this lecture are expressed as **framework-agnostic pseudocode**. Students may implement them in any deep learning framework (PyTorch, TensorFlow/Keras, JAX, etc.) during assignments.
+> **Note:** All model architectures in this lecture are expressed as **framework-agnostic pseudocode**. Associates may implement them in any deep learning framework (PyTorch, TensorFlow/Keras, JAX, etc.) during assignments.
 
 ---
 
@@ -47,7 +47,7 @@ By the end of this lecture, students will be able to:
 
 ## Scenario
 
-Students will work through a **multi-modal deep learning project** across three stages:
+Associates will work through a **multi-modal deep learning project** across three stages:
 
 - **Stage 1 -- CNN Image Classifier:** Design a convolutional neural network that classifies images (airplanes, cars, birds, cats, etc.), understand data augmentation, and optionally add residual connections.
 - **Stage 2 -- RNN/LSTM Text Sentiment:** Switch modalities to sequential text data. Design a vanilla RNN, observe its limitations on longer sequences, then upgrade to LSTM and GRU architectures.
@@ -107,7 +107,7 @@ W_{out} = \frac{W - k + 2p}{s} + 1
 
 ## STEP 1.2 -- Exploring Image Data (8 min)
 
-**[PACING: Live code. Students follow along.]**
+**[PACING: Live code. Associates follow along.]**
 
 ```python
 import numpy as np
@@ -383,7 +383,7 @@ Key points:
 
 **[BREAK -- 5 min]**
 
-> Students should review the CNN architecture pseudocode and be ready to discuss design choices.
+> Associates should review the CNN architecture pseudocode and be ready to discuss design choices.
 
 ---
 
@@ -474,7 +474,7 @@ print(f"Sample label:             {y_train_seq[0]}")
 
 ## STEP 2.3 -- Vanilla RNN for Sentiment (12 min)
 
-**[PACING: Pseudocode architecture walkthrough. This is the first RNN students design.]**
+**[PACING: Pseudocode architecture walkthrough. This is the first RNN Associates design.]**
 
 ```
 PSEUDOCODE: Vanilla RNN Classifier
@@ -780,7 +780,7 @@ plt.tight_layout(); plt.show()
 
 **[BREAK -- 5 min]**
 
-> Students should review the RNN/LSTM/GRU architectures and gate equations.
+> Associates should review the RNN/LSTM/GRU architectures and gate equations.
 
 ---
 
@@ -1108,7 +1108,7 @@ Input: [4, 3, 8, 6]   Expected: [6, 8, 3, 4]   Predicted: [6, 8, 3, 4]   [CORREC
 
 ## Suggested Exercises
 
-Have students:
+Have Associates:
 1. Implement the BasicCNN pseudocode in a framework of their choice and train on CIFAR-10.
 2. Implement the VanillaRNN, LSTM, and GRU classifiers and compare learning curves.
 3. Implement the Seq2Seq model and experiment with:

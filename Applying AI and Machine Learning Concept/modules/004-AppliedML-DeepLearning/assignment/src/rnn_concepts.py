@@ -1,7 +1,7 @@
 """
 Conceptual exercises for Recurrent Neural Networks (RNN, LSTM, GRU).
 
-Students must implement functions that compute hidden state updates,
+Associates must implement functions that compute hidden state updates,
 parameter counts, and analyze architecture tradeoffs.
 """
 

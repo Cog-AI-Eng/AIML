@@ -1,7 +1,7 @@
 """
 Conceptual exercises for Convolutional Neural Networks.
 
-Students must implement functions that compute CNN output dimensions,
+Associates must implement functions that compute CNN output dimensions,
 parameter counts, and trace information flow through network architectures.
 """
 
