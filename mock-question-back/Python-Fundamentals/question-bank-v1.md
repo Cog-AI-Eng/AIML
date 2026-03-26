@@ -391,8 +391,8 @@ squares = list(map(lambda x: x ** 2, numbers))
 evens = list(filter(lambda x: x % 2 == 0, numbers))
 
 # With sorted
-students = [{"name": "Bob", "grade": 85}, {"name": "Alice", "grade": 92}]
-sorted_students = sorted(students, key=lambda s: s["grade"])
+Associates = [{"name": "Bob", "grade": 85}, {"name": "Alice", "grade": 92}]
+sorted_students = sorted(Associates, key=lambda s: s["grade"])
 ```
 </details>
 
