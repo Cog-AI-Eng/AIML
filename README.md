@@ -87,9 +87,9 @@ SageMaker begins. SM Foundations + SM Training + first deep learning architectur
 11. [CNNs for Image Data](Applying%20AI%20and%20Machine%20Learning%20Concept/modules/004-AppliedML-DeepLearning/001-CNNs%20for%20Image%20Data/AIML-CT-CNNsforImageData.md)
 12. [Encoder-Decoder Architectures](Applying%20AI%20and%20Machine%20Learning%20Concept/modules/004-AppliedML-DeepLearning/004-Encoder-Decoder%20Architectures/AIML-CT-EncoderDecoderArchitectures.md)
 
-**Lectures**: [SM-LEC-AWSSageMakerFoundations.md](Training%20and%20Deploying%20Models%20with%20AWS%20SageMaker/modules/001-AWSSageMaker-Foundations/SM-LEC-AWSSageMakerFoundations.md), [SM-LEC-AWSSageMakerTraining.md](Training%20and%20Deploying%20Models%20with%20AWS%20SageMaker/modules/002-AWSSageMaker-Training/SM-LEC-AWSSageMakerTraining.md), [AIML-LEC-AppliedMLDeepLearning.md](Applying%20AI%20and%20Machine%20Learning%20Concept/modules/004-AppliedML-DeepLearning/AIML-LEC-AppliedMLDeepLearning.md)
+**Lecture**: [W1-Friday-LEC.md](lectures/W1-Friday-LEC.md)
 
-**Notebook**: [deep_learning_concepts.ipynb](Applying%20AI%20and%20Machine%20Learning%20Concept/modules/004-AppliedML-DeepLearning/lecture/deep_learning_concepts.ipynb)
+**Notebooks**: [W1-Friday-notebook.ipynb](lectures/W1-Friday-notebook.ipynb) (lecture), [dl_cnn_encoder_decoder.ipynb](Applying%20AI%20and%20Machine%20Learning%20Concept/modules/004-AppliedML-DeepLearning/lecture/dl_cnn_encoder_decoder.ipynb) (student)
 
 **Assignments**: [001-AWSSageMaker-Foundations](Training%20and%20Deploying%20Models%20with%20AWS%20SageMaker/modules/001-AWSSageMaker-Foundations/assignment/README.md), [002-AWSSageMaker-Training](Training%20and%20Deploying%20Models%20with%20AWS%20SageMaker/modules/002-AWSSageMaker-Training/assignment/README.md)
 
@@ -111,6 +111,8 @@ SM Deployment + remaining deep learning + SM MLOps.
 8. [Pipelines, DAGs & Versioning](Training%20and%20Deploying%20Models%20with%20AWS%20SageMaker/modules/004-AWSSageMaker-MLOps/002-Pipelines%2C%20DAGs%20%26%20Versioning/SM-CT-PipelinesDAGsVersioning.md)
 
 **Lectures**: [SM-LEC-AWSSageMakerDeployment.md](Training%20and%20Deploying%20Models%20with%20AWS%20SageMaker/modules/003-AWSSageMaker-Deployment/SM-LEC-AWSSageMakerDeployment.md), [SM-LEC-AWSSageMakerMLOps.md](Training%20and%20Deploying%20Models%20with%20AWS%20SageMaker/modules/004-AWSSageMaker-MLOps/SM-LEC-AWSSageMakerMLOps.md)
+
+**Notebook**: [dl_rnn_lstm_gru.ipynb](Applying%20AI%20and%20Machine%20Learning%20Concept/modules/004-AppliedML-DeepLearning/lecture/dl_rnn_lstm_gru.ipynb)
 
 **Assignments**: [003-AWSSageMaker-Deployment](Training%20and%20Deploying%20Models%20with%20AWS%20SageMaker/modules/003-AWSSageMaker-Deployment/assignment/README.md), [004-AWSSageMaker-MLOps](Training%20and%20Deploying%20Models%20with%20AWS%20SageMaker/modules/004-AWSSageMaker-MLOps/assignment/README.md)
 
