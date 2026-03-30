@@ -73,6 +73,8 @@ data = pd.DataFrame({
     "merchant_risk_score": np.random.uniform(0, 1, n).round(3),
 })
 data["target"] = ((data["amount"] > 800) & (data["hour"] < 6) | (data["merchant_risk_score"] > 0.85)).astype(int)
+noise = np.random.random(n) < 0.08
+data["target"] = (data["target"] ^ noise.astype(int))
 
 train = data.iloc[:1600]
 val = data.iloc[1600:]
@@ -515,7 +517,7 @@ Walk through the parameter-to-console mapping:
 | IAM role | `role` | Execution role ARN |
 | Entry script | `SourceCode.entry_script` | `train.py` |
 | Source dir | `SourceCode.source_dir` | `code/` |
-| Instance type | Compute config | `ml.m5.large` (cheapest general-purpose) |
+| Instance type | Compute config | `ml.m5.xlarge` (cheapest general-purpose) |
 | Hyperparameters | `hyperparameters` | `n-estimators=100, random-state=42` |
 | S3 output path | `output_data_config` | `s3://.../fraudshield/output/` |
 
@@ -523,7 +525,7 @@ Walk through the parameter-to-console mapping:
 
 While the job runs (3-7 minutes), narrate the lifecycle:
 
-> "SageMaker is provisioning an ml.m5.large instance, pulling the scikit-learn Docker container from ECR, downloading your training data from S3 into /opt/ml/input/data/train/, running your script, compressing /opt/ml/model/ into model.tar.gz, uploading it to S3, and tearing down the instance. You are billed only for this window."
+> "SageMaker is provisioning an ml.m5.xlarge instance, pulling the scikit-learn Docker container from ECR, downloading your training data from S3 into /opt/ml/input/data/train/, running your script, compressing /opt/ml/model/ into model.tar.gz, uploading it to S3, and tearing down the instance. You are billed only for this window."
 
 ---
 
@@ -623,7 +625,7 @@ Both jobs follow the same lifecycle:
 
 | Step | What Happened | sklearn Job (Script Mode) | Image Classification (Built-in) |
 |------|--------------|---------------------------|-------------------------------|
-| 1. Provisioning | Allocated instance | `ml.m5.large` | `ml.p3.2xlarge` (GPU) |
+| 1. Provisioning | Allocated instance | `ml.m5.xlarge` | `ml.p3.2xlarge` (GPU) |
 | 2. Container pull | Pulled framework image from ECR | scikit-learn 1.2-1 | TensorFlow 2.9 |
 | 3. Data download | Data into `/opt/ml/input/data/` | `train.csv` from S3 | CIFAR-10 images from S3 |
 | 4. Script execution | Ran entry script | Your `train.py` | SageMaker's `transfer_learning.py` |
@@ -788,7 +790,7 @@ Training uses `CrossEntropyLoss(ignore_index=PAD_TOKEN)` so padding positions do
 1. Switch to the Studio browser tab.
 2. Navigate to **JumpStart** in the left sidebar.
 3. Browse the model catalog. Point out categories: Text Generation, Image Classification, Tabular, Sentence Embeddings.
-4. Select a lightweight model that deploys on `ml.m5.large`.
+4. Select a lightweight model that deploys on `ml.m5.xlarge`.
 5. Set endpoint name to `fraudshield-demo-endpoint`. Click **Deploy**.
 
 > "JumpStart bundles the Model, Endpoint Configuration, and Endpoint creation into one action. In the Deployment module, you will do these three steps manually. For now, just see that SageMaker can deploy a model with minimal effort."
@@ -859,7 +861,7 @@ Training uses `CrossEntropyLoss(ignore_index=PAD_TOKEN)` so padding positions do
 |-------|-----------|
 | Student cannot find SageMaker | Check the region selector (top-right). Switch to `us-east-1`. |
 | Domain creation fails | Usually a VPC/subnet issue. Verify the default VPC exists. |
-| JumpStart model unavailable | Model catalog changes. Have 2-3 backup models that deploy on `ml.m5.large`. |
+| JumpStart model unavailable | Model catalog changes. Have 2-3 backup models that deploy on `ml.m5.xlarge`. |
 | Studio takes too long to load | First load can take 3-5 minutes. This is normal. |
 | Student forgets to delete endpoint | Walk over and help immediately. Check billing together. |
 | IAM role creation permission denied | Student's IAM user may lack `iam:CreateRole` permission. |
