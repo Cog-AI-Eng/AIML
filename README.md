@@ -11,7 +11,7 @@ This guide provides a day-by-day reading schedule across the first three weeks o
 
 ## How Links Work
 
-Links to existing content will open the file directly. Links to planned content (modules 005-010 under SageMaker, AWS Bedrock) will resolve once those files are added to the AFD directory.
+Links to existing content will open the file directly. Links to planned content (AWS Bedrock) will resolve once those files are added to the AFD directory.
 
 ---
 
@@ -87,9 +87,9 @@ SageMaker begins. SM Foundations + SM Training + first deep learning architectur
 11. [CNNs for Image Data](Applying%20AI%20and%20Machine%20Learning%20Concept/modules/004-AppliedML-DeepLearning/001-CNNs%20for%20Image%20Data/AIML-CT-CNNsforImageData.md)
 12. [Encoder-Decoder Architectures](Applying%20AI%20and%20Machine%20Learning%20Concept/modules/004-AppliedML-DeepLearning/004-Encoder-Decoder%20Architectures/AIML-CT-EncoderDecoderArchitectures.md)
 
-**Lecture**: [W1-Friday-LEC.md](lectures/W1-Friday-LEC.md)
+**Lecture**: [W1-Friday-LEC.md](lectures/week1/friday/W1-Friday-LEC.md)
 
-**Notebooks**: [W1-Friday-notebook.ipynb](lectures/W1-Friday-notebook.ipynb) (lecture), [dl_cnn_encoder_decoder.ipynb](Applying%20AI%20and%20Machine%20Learning%20Concept/modules/004-AppliedML-DeepLearning/lecture/dl_cnn_encoder_decoder.ipynb) (student)
+**Notebooks**: [W1-Friday-notebook.ipynb](lectures/week1/friday/W1-Friday-notebook.ipynb) (lecture), [dl_cnn_encoder_decoder.ipynb](Applying%20AI%20and%20Machine%20Learning%20Concept/modules/004-AppliedML-DeepLearning/lecture/dl_cnn_encoder_decoder.ipynb) (student)
 
 **Assignments**: [001-AWSSageMaker-Foundations](Training%20and%20Deploying%20Models%20with%20AWS%20SageMaker/modules/001-AWSSageMaker-Foundations/assignment/README.md), [002-AWSSageMaker-Training](Training%20and%20Deploying%20Models%20with%20AWS%20SageMaker/modules/002-AWSSageMaker-Training/assignment/README.md)
 
@@ -110,9 +110,9 @@ SM Deployment + remaining deep learning + SM MLOps.
 7. [MLOps & CI/CD Principles](Training%20and%20Deploying%20Models%20with%20AWS%20SageMaker/modules/004-AWSSageMaker-MLOps/001-MLOps%20%26%20CI_CD%20Principles/SM-CT-MLOpsCICDPrinciples.md)
 8. [Pipelines, DAGs & Versioning](Training%20and%20Deploying%20Models%20with%20AWS%20SageMaker/modules/004-AWSSageMaker-MLOps/002-Pipelines%2C%20DAGs%20%26%20Versioning/SM-CT-PipelinesDAGsVersioning.md)
 
-**Lectures**: [SM-LEC-AWSSageMakerDeployment.md](Training%20and%20Deploying%20Models%20with%20AWS%20SageMaker/modules/003-AWSSageMaker-Deployment/SM-LEC-AWSSageMakerDeployment.md), [SM-LEC-AWSSageMakerMLOps.md](Training%20and%20Deploying%20Models%20with%20AWS%20SageMaker/modules/004-AWSSageMaker-MLOps/SM-LEC-AWSSageMakerMLOps.md)
+**Lectures**: [W2-Monday-LEC.md](lectures/week2/1-monday/W2-Monday-LEC.md), [SM-LEC-AWSSageMakerDeployment.md](Training%20and%20Deploying%20Models%20with%20AWS%20SageMaker/modules/003-AWSSageMaker-Deployment/SM-LEC-AWSSageMakerDeployment.md), [SM-LEC-AWSSageMakerMLOps.md](Training%20and%20Deploying%20Models%20with%20AWS%20SageMaker/modules/004-AWSSageMaker-MLOps/SM-LEC-AWSSageMakerMLOps.md)
 
-**Notebook**: [dl_rnn_lstm_gru.ipynb](Applying%20AI%20and%20Machine%20Learning%20Concept/modules/004-AppliedML-DeepLearning/lecture/dl_rnn_lstm_gru.ipynb)
+**Notebooks**: [W2-Monday-notebook.ipynb](lectures/week2/1-monday/W2-Monday-notebook.ipynb) (lecture), [dl_rnn_lstm_gru.ipynb](Applying%20AI%20and%20Machine%20Learning%20Concept/modules/004-AppliedML-DeepLearning/lecture/dl_rnn_lstm_gru.ipynb) (student)
 
 **Assignments**: [003-AWSSageMaker-Deployment](Training%20and%20Deploying%20Models%20with%20AWS%20SageMaker/modules/003-AWSSageMaker-Deployment/assignment/README.md), [004-AWSSageMaker-MLOps](Training%20and%20Deploying%20Models%20with%20AWS%20SageMaker/modules/004-AWSSageMaker-MLOps/assignment/README.md)
 
@@ -122,17 +122,19 @@ SM Deployment + remaining deep learning + SM MLOps.
 
 Advanced SageMaker Data Engineering.
 
-1. [Studio & Classic Domains](Training%20and%20Deploying%20Models%20with%20AWS%20SageMaker/modules/005-AdvSageMaker-Data/001-Studio%20%26%20Classic%20Domains/SM-CT-StudioClassicDomains.md)
-2. [Data Wrangler Flows](Training%20and%20Deploying%20Models%20with%20AWS%20SageMaker/modules/005-AdvSageMaker-Data/002-Data%20Wrangler%20Flows/SM-CT-DataWranglerFlows.md)
-3. [Canvas No-code ML](Training%20and%20Deploying%20Models%20with%20AWS%20SageMaker/modules/005-AdvSageMaker-Data/003-Canvas%20No-code%20ML/SM-CT-CanvasNoCodeML.md)
-4. [Canvas vs. Autopilot](Training%20and%20Deploying%20Models%20with%20AWS%20SageMaker/modules/005-AdvSageMaker-Data/004-Canvas%20vs.%20Autopilot/SM-CT-CanvasvsAutopilot.md)
-5. [Feature Store Architecture](Training%20and%20Deploying%20Models%20with%20AWS%20SageMaker/modules/005-AdvSageMaker-Data/005-Feature%20Store%20Architecture/SM-CT-FeatureStoreArchitecture.md)
-6. [Autopilot AutoML Modes](Training%20and%20Deploying%20Models%20with%20AWS%20SageMaker/modules/005-AdvSageMaker-Data/006-Autopilot%20AutoML%20Modes/SM-CT-AutopilotAutoMLModes.md)
-7. [Exporting Flows to Pipelines](Training%20and%20Deploying%20Models%20with%20AWS%20SageMaker/modules/005-AdvSageMaker-Data/007-Exporting%20Flows%20to%20Pipelines/SM-CT-ExportingFlowstoPipelines.md)
+1. [Studio & Classic Domains](Advanced%20MLOps%20%26%20Production%20Engineering%20on%20SageMaker/modules/001-AdvSageMaker-Data/001-Studio%20%26%20Classic%20Domains/ASM-CT-StudioClassicDomains.md)
+2. [Data Wrangler Flows](Advanced%20MLOps%20%26%20Production%20Engineering%20on%20SageMaker/modules/001-AdvSageMaker-Data/002-Data%20Wrangler%20Flows/ASM-CT-DataWranglerFlows.md)
+3. [Canvas No-code ML](Advanced%20MLOps%20%26%20Production%20Engineering%20on%20SageMaker/modules/001-AdvSageMaker-Data/005-Canvas%20No-code%20ML/ASM-CT-CanvasNoCodeML.md)
+4. [Canvas vs. Autopilot](Advanced%20MLOps%20%26%20Production%20Engineering%20on%20SageMaker/modules/001-AdvSageMaker-Data/007-Canvas%20vs.%20Autopilot/ASM-CT-CanvasVsAutopilot.md)
+5. [Feature Store Architecture](Advanced%20MLOps%20%26%20Production%20Engineering%20on%20SageMaker/modules/001-AdvSageMaker-Data/003-Feature%20Store%20Architecture/ASM-CT-FeatureStoreArchitecture.md)
+6. [Autopilot AutoML Modes](Advanced%20MLOps%20%26%20Production%20Engineering%20on%20SageMaker/modules/001-AdvSageMaker-Data/006-Autopilot%20AutoML%20Modes/ASM-CT-AutopilotAutoMLModes.md)
+7. [Exporting Flows to Pipelines](Advanced%20MLOps%20%26%20Production%20Engineering%20on%20SageMaker/modules/001-AdvSageMaker-Data/004-Exporting%20Flows%20to%20Pipelines/ASM-CT-ExportingFlowsToPipelines.md)
 
-**Lecture**: [SM-LEC-AdvSageMakerData.md](Training%20and%20Deploying%20Models%20with%20AWS%20SageMaker/modules/005-AdvSageMaker-Data/SM-LEC-AdvSageMakerData.md)
+**Lectures**: [W2-Tuesday-LEC.md](lectures/week2/2-tuesday/W2-Tuesday-LEC.md), [ASM-LEC-AdvSageMakerData.md](Advanced%20MLOps%20%26%20Production%20Engineering%20on%20SageMaker/modules/001-AdvSageMaker-Data/ASM-LEC-AdvSageMakerData.md)
 
-**Assignment**: [005-AdvSageMaker-Data](Training%20and%20Deploying%20Models%20with%20AWS%20SageMaker/modules/005-AdvSageMaker-Data/assignment/README.md)
+**Notebooks**: [W2-Tuesday-notebook.ipynb](lectures/week2/2-tuesday/W2-Tuesday-notebook.ipynb) (lecture), [asm_feature_store_sdk.ipynb](Advanced%20MLOps%20%26%20Production%20Engineering%20on%20SageMaker/modules/001-AdvSageMaker-Data/lecture/asm_feature_store_sdk.ipynb) (student)
+
+**Assignment**: [001-AdvSageMaker-Data](Advanced%20MLOps%20%26%20Production%20Engineering%20on%20SageMaker/modules/001-AdvSageMaker-Data/assignment/README.md)
 
 ---
 
@@ -144,17 +146,17 @@ Applied ML Transformers + Advanced SageMaker Experiments and Lineage Tracking.
 2. [Transformer Architecture Details](Applying%20AI%20and%20Machine%20Learning%20Concept/modules/005-AppliedML-Transformers/002-Transformer%20Architecture%20Details/AIML-CT-TransformerArchitectureDetails.md)
 3. [BERT, GPT & T5 Use Cases](Applying%20AI%20and%20Machine%20Learning%20Concept/modules/005-AppliedML-Transformers/003-BERT%2C%20GPT%20%26%20T5%20Use%20Cases/AIML-CT-BERTGPTT5UseCases.md)
 4. [Transfer Learning & Fine-tuning](Applying%20AI%20and%20Machine%20Learning%20Concept/modules/005-AppliedML-Transformers/004-Transfer%20Learning%20%26%20Fine-tuning/AIML-CT-TransferLearningFinetuning.md)
-5. [Experiments & Trials](Training%20and%20Deploying%20Models%20with%20AWS%20SageMaker/modules/007-AdvSageMaker-Tracking/001-Experiments%20%26%20Trials/SM-CT-ExperimentsTrials.md)
-6. [Lineage Tracking Entities](Training%20and%20Deploying%20Models%20with%20AWS%20SageMaker/modules/007-AdvSageMaker-Tracking/002-Lineage%20Tracking%20Entities/SM-CT-LineageTrackingEntities.md)
-7. [Reproducibility Patterns](Training%20and%20Deploying%20Models%20with%20AWS%20SageMaker/modules/007-AdvSageMaker-Tracking/003-Reproducibility%20Patterns/SM-CT-ReproducibilityPatterns.md)
-8. [Cross-account Sharing](Training%20and%20Deploying%20Models%20with%20AWS%20SageMaker/modules/007-AdvSageMaker-Tracking/004-Cross-account%20Sharing/SM-CT-CrossAccountSharing.md)
-9. [Feature Store Lineage Integration](Training%20and%20Deploying%20Models%20with%20AWS%20SageMaker/modules/007-AdvSageMaker-Tracking/005-Feature%20Store%20Lineage%20Integration/SM-CT-FeatureStoreLineageIntegration.md)
+5. [Experiments & Trials](Advanced%20MLOps%20%26%20Production%20Engineering%20on%20SageMaker/modules/003-AdvSageMaker-Tracking/001-Experiments%20%26%20Trials/ASM-CT-ExperimentsTrials.md)
+6. [Lineage Tracking Entities](Advanced%20MLOps%20%26%20Production%20Engineering%20on%20SageMaker/modules/003-AdvSageMaker-Tracking/002-Lineage%20Tracking%20Entities/ASM-CT-LineageTrackingEntities.md)
+7. [Reproducibility Patterns](Advanced%20MLOps%20%26%20Production%20Engineering%20on%20SageMaker/modules/003-AdvSageMaker-Tracking/004-Reproducibility%20Patterns/ASM-CT-ReproducibilityPatterns.md)
+8. [Cross-account Sharing](Advanced%20MLOps%20%26%20Production%20Engineering%20on%20SageMaker/modules/003-AdvSageMaker-Tracking/005-Cross-account%20Sharing/ASM-CT-CrossAccountSharing.md)
+9. [Feature Store Lineage Integration](Advanced%20MLOps%20%26%20Production%20Engineering%20on%20SageMaker/modules/003-AdvSageMaker-Tracking/003-Feature%20Store%20Lineage%20Integration/ASM-CT-FeatureStoreLineageIntegration.md)
 
-**Lectures**: [AIML-LEC-AppliedMLTransformers.md](Applying%20AI%20and%20Machine%20Learning%20Concept/modules/005-AppliedML-Transformers/AIML-LEC-AppliedMLTransformers.md), [SM-LEC-AdvSageMakerTracking.md](Training%20and%20Deploying%20Models%20with%20AWS%20SageMaker/modules/007-AdvSageMaker-Tracking/SM-LEC-AdvSageMakerTracking.md)
+**Lectures**: [W2-Wednesday-LEC.md](lectures/week2/3-wednesday/W2-Wednesday-LEC.md), [AIML-LEC-AppliedMLTransformers.md](Applying%20AI%20and%20Machine%20Learning%20Concept/modules/005-AppliedML-Transformers/AIML-LEC-AppliedMLTransformers.md), [ASM-LEC-AdvSageMakerTracking.md](Advanced%20MLOps%20%26%20Production%20Engineering%20on%20SageMaker/modules/003-AdvSageMaker-Tracking/ASM-LEC-AdvSageMakerTracking.md)
 
-**Notebook**: [transformers_concepts.ipynb](Applying%20AI%20and%20Machine%20Learning%20Concept/modules/005-AppliedML-Transformers/lecture/transformers_concepts.ipynb)
+**Notebooks**: [W2-Wednesday-notebook.ipynb](lectures/week2/3-wednesday/W2-Wednesday-notebook.ipynb) (lecture), [transformers_concepts.ipynb](Applying%20AI%20and%20Machine%20Learning%20Concept/modules/005-AppliedML-Transformers/lecture/transformers_concepts.ipynb) (student), [asm_experiments_sdk.ipynb](Advanced%20MLOps%20%26%20Production%20Engineering%20on%20SageMaker/modules/003-AdvSageMaker-Tracking/lecture/asm_experiments_sdk.ipynb) (student)
 
-**Assignments**: [005-AppliedML-Transformers](Applying%20AI%20and%20Machine%20Learning%20Concept/modules/005-AppliedML-Transformers/assignment/README.md), [007-AdvSageMaker-Tracking](Training%20and%20Deploying%20Models%20with%20AWS%20SageMaker/modules/007-AdvSageMaker-Tracking/assignment/README.md)
+**Assignments**: [005-AppliedML-Transformers](Applying%20AI%20and%20Machine%20Learning%20Concept/modules/005-AppliedML-Transformers/assignment/README.md), [003-AdvSageMaker-Tracking](Advanced%20MLOps%20%26%20Production%20Engineering%20on%20SageMaker/modules/003-AdvSageMaker-Tracking/assignment/README.md)
 
 ---
 
@@ -162,18 +164,20 @@ Applied ML Transformers + Advanced SageMaker Experiments and Lineage Tracking.
 
 Advanced SageMaker Built-in Algorithms.
 
-1. [XGBoost Architecture](Training%20and%20Deploying%20Models%20with%20AWS%20SageMaker/modules/006-AdvSageMaker-Algorithms/001-XGBoost%20Architecture/SM-CT-XGBoostArchitecture.md)
-2. [K-Means Clustering](Training%20and%20Deploying%20Models%20with%20AWS%20SageMaker/modules/006-AdvSageMaker-Algorithms/002-K-Means%20Clustering/SM-CT-KMeansClustering.md)
-3. [Random Cut Forest](Training%20and%20Deploying%20Models%20with%20AWS%20SageMaker/modules/006-AdvSageMaker-Algorithms/003-Random%20Cut%20Forest/SM-CT-RandomCutForest.md)
-4. [BlazingText & Word2Vec](Training%20and%20Deploying%20Models%20with%20AWS%20SageMaker/modules/006-AdvSageMaker-Algorithms/004-BlazingText%20%26%20Word2Vec/SM-CT-BlazingTextWord2Vec.md)
-5. [DeepAR Time Series](Training%20and%20Deploying%20Models%20with%20AWS%20SageMaker/modules/006-AdvSageMaker-Algorithms/005-DeepAR%20Time%20Series/SM-CT-DeepARTimeSeries.md)
-6. [HPO Job Anatomy](Training%20and%20Deploying%20Models%20with%20AWS%20SageMaker/modules/006-AdvSageMaker-Algorithms/006-HPO%20Job%20Anatomy/SM-CT-HPOJobAnatomy.md)
-7. [Optimization Strategies](Training%20and%20Deploying%20Models%20with%20AWS%20SageMaker/modules/006-AdvSageMaker-Algorithms/007-Optimization%20Strategies/SM-CT-OptimizationStrategies.md)
-8. [Parameter Ranges in Pipelines](Training%20and%20Deploying%20Models%20with%20AWS%20SageMaker/modules/006-AdvSageMaker-Algorithms/008-Parameter%20Ranges%20in%20Pipelines/SM-CT-ParameterRangesinPipelines.md)
+1. [XGBoost Architecture](Advanced%20MLOps%20%26%20Production%20Engineering%20on%20SageMaker/modules/002-AdvSageMaker-Algorithms/001-XGBoost%20Architecture/ASM-CT-XGBoostArchitecture.md)
+2. [K-Means Clustering](Advanced%20MLOps%20%26%20Production%20Engineering%20on%20SageMaker/modules/002-AdvSageMaker-Algorithms/002-K-Means%20Clustering/ASM-CT-KMeansClustering.md)
+3. [Random Cut Forest](Advanced%20MLOps%20%26%20Production%20Engineering%20on%20SageMaker/modules/002-AdvSageMaker-Algorithms/003-Random%20Cut%20Forest/ASM-CT-RandomCutForest.md)
+4. [BlazingText & Word2Vec](Advanced%20MLOps%20%26%20Production%20Engineering%20on%20SageMaker/modules/002-AdvSageMaker-Algorithms/004-BlazingText%20%26%20Word2Vec/ASM-CT-BlazingTextWord2Vec.md)
+5. [DeepAR Time Series](Advanced%20MLOps%20%26%20Production%20Engineering%20on%20SageMaker/modules/002-AdvSageMaker-Algorithms/005-DeepAR%20Time%20Series/ASM-CT-DeepARTimeSeries.md)
+6. [HPO Job Anatomy](Advanced%20MLOps%20%26%20Production%20Engineering%20on%20SageMaker/modules/002-AdvSageMaker-Algorithms/006-HPO%20Job%20Anatomy/ASM-CT-HPOJobAnatomy.md)
+7. [Optimization Strategies](Advanced%20MLOps%20%26%20Production%20Engineering%20on%20SageMaker/modules/002-AdvSageMaker-Algorithms/007-Optimization%20Strategies/ASM-CT-OptimizationStrategies.md)
+8. [Parameter Ranges in Pipelines](Advanced%20MLOps%20%26%20Production%20Engineering%20on%20SageMaker/modules/002-AdvSageMaker-Algorithms/008-Parameter%20Ranges%20in%20Pipelines/ASM-CT-ParameterRangesInPipelines.md)
 
-**Lecture**: [SM-LEC-AdvSageMakerAlgorithms.md](Training%20and%20Deploying%20Models%20with%20AWS%20SageMaker/modules/006-AdvSageMaker-Algorithms/SM-LEC-AdvSageMakerAlgorithms.md)
+**Lectures**: [W2-Thursday-LEC.md](lectures/week2/4-thursday/W2-Thursday-LEC.md), [ASM-LEC-AdvSageMakerAlgorithms.md](Advanced%20MLOps%20%26%20Production%20Engineering%20on%20SageMaker/modules/002-AdvSageMaker-Algorithms/ASM-LEC-AdvSageMakerAlgorithms.md)
 
-**Assignment**: [006-AdvSageMaker-Algorithms](Training%20and%20Deploying%20Models%20with%20AWS%20SageMaker/modules/006-AdvSageMaker-Algorithms/assignment/README.md)
+**Notebooks**: [W2-Thursday-notebook.ipynb](lectures/week2/4-thursday/W2-Thursday-notebook.ipynb) (lecture), [asm_algorithms_sdk.ipynb](Advanced%20MLOps%20%26%20Production%20Engineering%20on%20SageMaker/modules/002-AdvSageMaker-Algorithms/lecture/asm_algorithms_sdk.ipynb) (student)
+
+**Assignment**: [002-AdvSageMaker-Algorithms](Advanced%20MLOps%20%26%20Production%20Engineering%20on%20SageMaker/modules/002-AdvSageMaker-Algorithms/assignment/README.md)
 
 ---
 
@@ -181,22 +185,24 @@ Advanced SageMaker Built-in Algorithms.
 
 Advanced SageMaker Inference Patterns + Model Monitoring.
 
-1. [Inference Decision Matrix](Training%20and%20Deploying%20Models%20with%20AWS%20SageMaker/modules/008-AdvSageMaker-Inference/001-Inference%20Decision%20Matrix/SM-CT-InferenceDecisionMatrix.md)
-2. [Serverless Inference](Training%20and%20Deploying%20Models%20with%20AWS%20SageMaker/modules/008-AdvSageMaker-Inference/002-Serverless%20Inference/SM-CT-ServerlessInference.md)
-3. [Asynchronous Inference](Training%20and%20Deploying%20Models%20with%20AWS%20SageMaker/modules/008-AdvSageMaker-Inference/003-Asynchronous%20Inference/SM-CT-AsynchronousInference.md)
-4. [Batch Transform Architecture](Training%20and%20Deploying%20Models%20with%20AWS%20SageMaker/modules/008-AdvSageMaker-Inference/004-Batch%20Transform%20Architecture/SM-CT-BatchTransformArchitecture.md)
-5. [Multi-Model Endpoints](Training%20and%20Deploying%20Models%20with%20AWS%20SageMaker/modules/008-AdvSageMaker-Inference/005-Multi-Model%20Endpoints/SM-CT-MultiModelEndpoints.md)
-6. [Multi-Container Endpoints](Training%20and%20Deploying%20Models%20with%20AWS%20SageMaker/modules/008-AdvSageMaker-Inference/006-Multi-Container%20Endpoints/SM-CT-MultiContainerEndpoints.md)
-7. [Model Monitor Baselines](Training%20and%20Deploying%20Models%20with%20AWS%20SageMaker/modules/009-AdvSageMaker-Monitoring/001-Model%20Monitor%20Baselines/SM-CT-ModelMonitorBaselines.md)
-8. [Data Quality Monitoring](Training%20and%20Deploying%20Models%20with%20AWS%20SageMaker/modules/009-AdvSageMaker-Monitoring/002-Data%20Quality%20Monitoring/SM-CT-DataQualityMonitoring.md)
-9. [Model Quality Monitoring](Training%20and%20Deploying%20Models%20with%20AWS%20SageMaker/modules/009-AdvSageMaker-Monitoring/003-Model%20Quality%20Monitoring/SM-CT-ModelQualityMonitoring.md)
-10. [Bias & Attribution Drift](Training%20and%20Deploying%20Models%20with%20AWS%20SageMaker/modules/009-AdvSageMaker-Monitoring/004-Bias%20%26%20Attribution%20Drift/SM-CT-BiasAttributionDrift.md)
-11. [Drift Statistical Tests](Training%20and%20Deploying%20Models%20with%20AWS%20SageMaker/modules/009-AdvSageMaker-Monitoring/005-Drift%20Statistical%20Tests/SM-CT-DriftStatisticalTests.md)
-12. [Monitor & Pipeline Automation](Training%20and%20Deploying%20Models%20with%20AWS%20SageMaker/modules/009-AdvSageMaker-Monitoring/006-Monitor%20%26%20Pipeline%20Automation/SM-CT-MonitorPipelineAutomation.md)
+1. [Inference Decision Matrix](Advanced%20MLOps%20%26%20Production%20Engineering%20on%20SageMaker/modules/004-AdvSageMaker-Inference/003-Inference%20Decision%20Matrix/ASM-CT-InferenceDecisionMatrix.md)
+2. [Serverless Inference](Advanced%20MLOps%20%26%20Production%20Engineering%20on%20SageMaker/modules/004-AdvSageMaker-Inference/001-Serverless%20Inference/ASM-CT-ServerlessInference.md)
+3. [Asynchronous Inference](Advanced%20MLOps%20%26%20Production%20Engineering%20on%20SageMaker/modules/004-AdvSageMaker-Inference/002-Asynchronous%20Inference/ASM-CT-AsynchronousInference.md)
+4. [Batch Transform Architecture](Advanced%20MLOps%20%26%20Production%20Engineering%20on%20SageMaker/modules/004-AdvSageMaker-Inference/004-Batch%20Transform%20Architecture/ASM-CT-BatchTransformArchitecture.md)
+5. [Multi-Model Endpoints](Advanced%20MLOps%20%26%20Production%20Engineering%20on%20SageMaker/modules/004-AdvSageMaker-Inference/005-Multi-Model%20Endpoints/ASM-CT-MultiModelEndpoints.md)
+6. [Multi-Container Endpoints](Advanced%20MLOps%20%26%20Production%20Engineering%20on%20SageMaker/modules/004-AdvSageMaker-Inference/006-Multi-Container%20Endpoints/ASM-CT-MultiContainerEndpoints.md)
+7. [Model Monitor Baselines](Advanced%20MLOps%20%26%20Production%20Engineering%20on%20SageMaker/modules/005-AdvSageMaker-Monitoring/001-Model%20Monitor%20Baselines/ASM-CT-ModelMonitorBaselines.md)
+8. [Data Quality Monitoring](Advanced%20MLOps%20%26%20Production%20Engineering%20on%20SageMaker/modules/005-AdvSageMaker-Monitoring/002-Data%20Quality%20Monitoring/ASM-CT-DataQualityMonitoring.md)
+9. [Model Quality Monitoring](Advanced%20MLOps%20%26%20Production%20Engineering%20on%20SageMaker/modules/005-AdvSageMaker-Monitoring/003-Model%20Quality%20Monitoring/ASM-CT-ModelQualityMonitoring.md)
+10. [Bias & Attribution Drift](Advanced%20MLOps%20%26%20Production%20Engineering%20on%20SageMaker/modules/005-AdvSageMaker-Monitoring/004-Bias%20%26%20Attribution%20Drift/ASM-CT-BiasAttributionDrift.md)
+11. [Drift Statistical Tests](Advanced%20MLOps%20%26%20Production%20Engineering%20on%20SageMaker/modules/005-AdvSageMaker-Monitoring/005-Drift%20Statistical%20Tests/ASM-CT-DriftStatisticalTests.md)
+12. [Monitor & Pipeline Automation](Advanced%20MLOps%20%26%20Production%20Engineering%20on%20SageMaker/modules/005-AdvSageMaker-Monitoring/006-Monitor%20%26%20Pipeline%20Automation/ASM-CT-MonitorPipelineAutomation.md)
 
-**Lectures**: [SM-LEC-AdvSageMakerInference.md](Training%20and%20Deploying%20Models%20with%20AWS%20SageMaker/modules/008-AdvSageMaker-Inference/SM-LEC-AdvSageMakerInference.md), [SM-LEC-AdvSageMakerMonitoring.md](Training%20and%20Deploying%20Models%20with%20AWS%20SageMaker/modules/009-AdvSageMaker-Monitoring/SM-LEC-AdvSageMakerMonitoring.md)
+**Lectures**: [W2-Friday-LEC.md](lectures/week2/5-friday/W2-Friday-LEC.md), [ASM-LEC-AdvSageMakerInference.md](Advanced%20MLOps%20%26%20Production%20Engineering%20on%20SageMaker/modules/004-AdvSageMaker-Inference/ASM-LEC-AdvSageMakerInference.md), [ASM-LEC-AdvSageMakerMonitoring.md](Advanced%20MLOps%20%26%20Production%20Engineering%20on%20SageMaker/modules/005-AdvSageMaker-Monitoring/ASM-LEC-AdvSageMakerMonitoring.md)
 
-**Assignments**: [008-AdvSageMaker-Inference](Training%20and%20Deploying%20Models%20with%20AWS%20SageMaker/modules/008-AdvSageMaker-Inference/assignment/README.md), [009-AdvSageMaker-Monitoring](Training%20and%20Deploying%20Models%20with%20AWS%20SageMaker/modules/009-AdvSageMaker-Monitoring/assignment/README.md)
+**Notebooks**: [W2-Friday-notebook.ipynb](lectures/week2/5-friday/W2-Friday-notebook.ipynb) (lecture), [asm_inference_sdk.ipynb](Advanced%20MLOps%20%26%20Production%20Engineering%20on%20SageMaker/modules/004-AdvSageMaker-Inference/lecture/asm_inference_sdk.ipynb) (student), [asm_monitor_sdk.ipynb](Advanced%20MLOps%20%26%20Production%20Engineering%20on%20SageMaker/modules/005-AdvSageMaker-Monitoring/lecture/asm_monitor_sdk.ipynb) (student)
+
+**Assignments**: [004-AdvSageMaker-Inference](Advanced%20MLOps%20%26%20Production%20Engineering%20on%20SageMaker/modules/004-AdvSageMaker-Inference/assignment/README.md), [005-AdvSageMaker-Monitoring](Advanced%20MLOps%20%26%20Production%20Engineering%20on%20SageMaker/modules/005-AdvSageMaker-Monitoring/assignment/README.md)
 
 ---
 
@@ -206,17 +212,19 @@ Advanced SageMaker Inference Patterns + Model Monitoring.
 
 Advanced SageMaker Architecture and Cost Optimization. Last AdvSageMaker module.
 
-1. [Managed Spot Training](Training%20and%20Deploying%20Models%20with%20AWS%20SageMaker/modules/010-AdvSageMaker-Architecture/001-Managed%20Spot%20Training/SM-CT-ManagedSpotTraining.md)
-2. [Spot Instances for HPO](Training%20and%20Deploying%20Models%20with%20AWS%20SageMaker/modules/010-AdvSageMaker-Architecture/002-Spot%20Instances%20for%20HPO/SM-CT-SpotInstancesforHPO.md)
-3. [Instance Right-sizing](Training%20and%20Deploying%20Models%20with%20AWS%20SageMaker/modules/010-AdvSageMaker-Architecture/003-Instance%20Right-sizing/SM-CT-InstanceRightSizing.md)
-4. [Auto-scaling Policies](Training%20and%20Deploying%20Models%20with%20AWS%20SageMaker/modules/010-AdvSageMaker-Architecture/004-Auto-scaling%20Policies/SM-CT-AutoScalingPolicies.md)
-5. [Inference Recommender](Training%20and%20Deploying%20Models%20with%20AWS%20SageMaker/modules/010-AdvSageMaker-Architecture/005-Inference%20Recommender/SM-CT-InferenceRecommender.md)
-6. [CloudWatch Dashboards](Training%20and%20Deploying%20Models%20with%20AWS%20SageMaker/modules/010-AdvSageMaker-Architecture/006-CloudWatch%20Dashboards/SM-CT-CloudWatchDashboards.md)
-7. [VPC, PrivateLink & KMS](Training%20and%20Deploying%20Models%20with%20AWS%20SageMaker/modules/010-AdvSageMaker-Architecture/007-VPC%2C%20PrivateLink%20%26%20KMS/SM-CT-VPCPrivateLinkKMS.md)
+1. [Managed Spot Training](Advanced%20MLOps%20%26%20Production%20Engineering%20on%20SageMaker/modules/006-AdvSageMaker-Architecture/001-Managed%20Spot%20Training/ASM-CT-ManagedSpotTraining.md)
+2. [Spot Instances for HPO](Advanced%20MLOps%20%26%20Production%20Engineering%20on%20SageMaker/modules/006-AdvSageMaker-Architecture/002-Spot%20Instances%20for%20HPO/ASM-CT-SpotInstancesForHPO.md)
+3. [Instance Right-sizing](Advanced%20MLOps%20%26%20Production%20Engineering%20on%20SageMaker/modules/006-AdvSageMaker-Architecture/003-Instance%20Right-sizing/ASM-CT-InstanceRightSizing.md)
+4. [Auto-scaling Policies](Advanced%20MLOps%20%26%20Production%20Engineering%20on%20SageMaker/modules/006-AdvSageMaker-Architecture/004-Auto-scaling%20Policies/ASM-CT-AutoScalingPolicies.md)
+5. [Inference Recommender](Advanced%20MLOps%20%26%20Production%20Engineering%20on%20SageMaker/modules/006-AdvSageMaker-Architecture/005-Inference%20Recommender/ASM-CT-InferenceRecommender.md)
+6. [CloudWatch Dashboards](Advanced%20MLOps%20%26%20Production%20Engineering%20on%20SageMaker/modules/006-AdvSageMaker-Architecture/006-CloudWatch%20Dashboards/ASM-CT-CloudWatchDashboards.md)
+7. [VPC, PrivateLink & KMS](Advanced%20MLOps%20%26%20Production%20Engineering%20on%20SageMaker/modules/006-AdvSageMaker-Architecture/007-VPC%2C%20PrivateLink%20%26%20KMS/ASM-CT-VPCPrivateLinkKMS.md)
 
-**Lecture**: [SM-LEC-AdvSageMakerArchitecture.md](Training%20and%20Deploying%20Models%20with%20AWS%20SageMaker/modules/010-AdvSageMaker-Architecture/SM-LEC-AdvSageMakerArchitecture.md)
+**Lectures**: [W3-Monday-LEC.md](lectures/week3/1-monday/W3-Monday-LEC.md), [ASM-LEC-AdvSageMakerArchitecture.md](Advanced%20MLOps%20%26%20Production%20Engineering%20on%20SageMaker/modules/006-AdvSageMaker-Architecture/ASM-LEC-AdvSageMakerArchitecture.md)
 
-**Assignment**: [010-AdvSageMaker-Architecture](Training%20and%20Deploying%20Models%20with%20AWS%20SageMaker/modules/010-AdvSageMaker-Architecture/assignment/README.md)
+**Notebooks**: [W3-Monday-notebook.ipynb](lectures/week3/1-monday/W3-Monday-notebook.ipynb) (lecture), [asm_cost_security_sdk.ipynb](Advanced%20MLOps%20%26%20Production%20Engineering%20on%20SageMaker/modules/006-AdvSageMaker-Architecture/lecture/asm_cost_security_sdk.ipynb) (student)
+
+**Assignment**: [006-AdvSageMaker-Architecture](Advanced%20MLOps%20%26%20Production%20Engineering%20on%20SageMaker/modules/006-AdvSageMaker-Architecture/assignment/README.md)
 
 ---
 
@@ -236,7 +244,9 @@ AWS Bedrock Foundations + Governance.
 10. [CloudWatch Monitoring](AWS%20Bedrock/modules/002-AWSBedrock-Governance/005-CloudWatch%20Monitoring/BR-CT-CloudWatchMonitoring.md)
 11. [API Quotas & Handling Throttling](AWS%20Bedrock/modules/002-AWSBedrock-Governance/006-API%20Quotas%20%26%20Handling%20Throttling/BR-CT-APIQuotasHandlingThrottling.md)
 
-**Lectures**: [BR-LEC-AWSBedrockFoundations.md](AWS%20Bedrock/modules/001-AWSBedrock-Foundations/BR-LEC-AWSBedrockFoundations.md), [BR-LEC-AWSBedrockGovernance.md](AWS%20Bedrock/modules/002-AWSBedrock-Governance/BR-LEC-AWSBedrockGovernance.md)
+**Lectures**: [W3-Tuesday-LEC.md](lectures/week3/2-tuesday/W3-Tuesday-LEC.md), [BR-LEC-AWSBedrockFoundations.md](AWS%20Bedrock/modules/001-AWSBedrock-Foundations/BR-LEC-AWSBedrockFoundations.md), [BR-LEC-AWSBedrockGovernance.md](AWS%20Bedrock/modules/002-AWSBedrock-Governance/BR-LEC-AWSBedrockGovernance.md)
+
+**Notebook**: [W3-Tuesday-notebook.ipynb](lectures/week3/2-tuesday/W3-Tuesday-notebook.ipynb) (lecture)
 
 **Assignment**: [001-AWSBedrock-Foundations](AWS%20Bedrock/modules/001-AWSBedrock-Foundations/assignment/README.md)
 
@@ -263,16 +273,16 @@ Open for review, office hours, project work, or self-study.
 | Day | Assignment |
 |-----|-----------|
 | Monday | [003-AWSSageMaker-Deployment](Training%20and%20Deploying%20Models%20with%20AWS%20SageMaker/modules/003-AWSSageMaker-Deployment/assignment/README.md), [004-AWSSageMaker-MLOps](Training%20and%20Deploying%20Models%20with%20AWS%20SageMaker/modules/004-AWSSageMaker-MLOps/assignment/README.md) |
-| Tuesday | [005-AdvSageMaker-Data](Training%20and%20Deploying%20Models%20with%20AWS%20SageMaker/modules/005-AdvSageMaker-Data/assignment/README.md) |
-| Wednesday | [005-AppliedML-Transformers](Applying%20AI%20and%20Machine%20Learning%20Concept/modules/005-AppliedML-Transformers/assignment/README.md), [007-AdvSageMaker-Tracking](Training%20and%20Deploying%20Models%20with%20AWS%20SageMaker/modules/007-AdvSageMaker-Tracking/assignment/README.md) |
-| Thursday | [006-AdvSageMaker-Algorithms](Training%20and%20Deploying%20Models%20with%20AWS%20SageMaker/modules/006-AdvSageMaker-Algorithms/assignment/README.md) |
-| Friday | [008-AdvSageMaker-Inference](Training%20and%20Deploying%20Models%20with%20AWS%20SageMaker/modules/008-AdvSageMaker-Inference/assignment/README.md), [009-AdvSageMaker-Monitoring](Training%20and%20Deploying%20Models%20with%20AWS%20SageMaker/modules/009-AdvSageMaker-Monitoring/assignment/README.md) |
+| Tuesday | [001-AdvSageMaker-Data](Advanced%20MLOps%20%26%20Production%20Engineering%20on%20SageMaker/modules/001-AdvSageMaker-Data/assignment/README.md) |
+| Wednesday | [005-AppliedML-Transformers](Applying%20AI%20and%20Machine%20Learning%20Concept/modules/005-AppliedML-Transformers/assignment/README.md), [003-AdvSageMaker-Tracking](Advanced%20MLOps%20%26%20Production%20Engineering%20on%20SageMaker/modules/003-AdvSageMaker-Tracking/assignment/README.md) |
+| Thursday | [002-AdvSageMaker-Algorithms](Advanced%20MLOps%20%26%20Production%20Engineering%20on%20SageMaker/modules/002-AdvSageMaker-Algorithms/assignment/README.md) |
+| Friday | [004-AdvSageMaker-Inference](Advanced%20MLOps%20%26%20Production%20Engineering%20on%20SageMaker/modules/004-AdvSageMaker-Inference/assignment/README.md), [005-AdvSageMaker-Monitoring](Advanced%20MLOps%20%26%20Production%20Engineering%20on%20SageMaker/modules/005-AdvSageMaker-Monitoring/assignment/README.md) |
 
 ### Week 3
 
 | Day | Assignment |
 |-----|-----------|
-| Monday | [010-AdvSageMaker-Architecture](Training%20and%20Deploying%20Models%20with%20AWS%20SageMaker/modules/010-AdvSageMaker-Architecture/assignment/README.md) |
+| Monday | [006-AdvSageMaker-Architecture](Advanced%20MLOps%20%26%20Production%20Engineering%20on%20SageMaker/modules/006-AdvSageMaker-Architecture/assignment/README.md) |
 | Tuesday | [001-AWSBedrock-Foundations](AWS%20Bedrock/modules/001-AWSBedrock-Foundations/assignment/README.md) |
 
 ---
@@ -283,9 +293,13 @@ Open for review, office hours, project work, or self-study.
 - [AIML-RV-Int.md](Applying%20AI%20and%20Machine%20Learning%20Concept/AIML-RV-Int.md)
 - [AIML-RV-Quiz.md](Applying%20AI%20and%20Machine%20Learning%20Concept/AIML-RV-Quiz.md)
 
-**SM Review** -- recommended after Week 3 Monday:
+**SM Review** -- recommended after Week 2 Monday:
 - [SM-RV-Int.md](Training%20and%20Deploying%20Models%20with%20AWS%20SageMaker/SM-RV-Int.md)
 - [SM-RV-Quiz.md](Training%20and%20Deploying%20Models%20with%20AWS%20SageMaker/SM-RV-Quiz.md)
+
+**ASM Review** -- recommended after Week 3 Monday:
+- [ASM-RV-Int.md](Advanced%20MLOps%20%26%20Production%20Engineering%20on%20SageMaker/ASM-RV-Int.md)
+- [ASM-RV-Quiz.md](Advanced%20MLOps%20%26%20Production%20Engineering%20on%20SageMaker/ASM-RV-Quiz.md)
 
 **Mock Question Banks (don't forget the interviews can cover this too)**:
 - [Python Fundamentals](mock-question-back/Python-Fundamentals/question-bank-v1.md)
