@@ -27,7 +27,9 @@
 | 7 | Linear Regression | The baseline model for continuous targets |
 | 8 | Logistic Regression | The baseline model for binary classification |
 | 9 | Algorithm Selection Framework | A repeatable five-step process for choosing the right model |
-| 10 | Key Tools | scikit-learn, pandas, NumPy, matplotlib, seaborn, Git |
+| 10 | Decision Trees | A model that splits data with yes/no questions to reach a prediction |
+| 11 | Random Forest | An ensemble of many decision trees that votes for a more stable answer |
+| 12 | Key Tools | scikit-learn, pandas, NumPy, matplotlib, seaborn, Git |
 
 ---
 
@@ -313,7 +315,144 @@ Only when baselines have plateaued AND diagnostics suggest underfitting AND the 
 
 ---
 
-## 9. Key Tools (Quick Reference)
+## 10. Decision Trees
+
+**What it is:**
+A supervised learning model that makes predictions by learning a series of if/then rules from the data. It recursively splits the dataset on the feature and threshold that best separates the target classes (classification) or reduces prediction error (regression), forming a tree structure from a root node down to leaf nodes that hold the final predictions.
+
+**How a split is chosen:**
+At each node, the algorithm evaluates every feature and every possible threshold, picking the one that produces the "purest" child nodes. Purity is measured by:
+
+| Criterion | Used For | Idea |
+|-----------|----------|------|
+| **Gini Impurity** | Classification (default in scikit-learn) | Probability of misclassifying a randomly chosen sample; 0 = pure node |
+| **Entropy / Information Gain** | Classification | Measures disorder; a split that reduces entropy the most wins |
+| **MSE reduction** | Regression | Split that most reduces the variance of the target in each child |
+
+**Why it matters:**
+Decision trees are the foundation for nearly every top-performing tabular ML algorithm (Random Forest, XGBoost, LightGBM, CatBoost). They are also the most interpretable non-linear model -- you can literally draw the decision path and show it to a stakeholder.
+
+**Key hyperparameters:**
+
+| Parameter | What It Controls | Overfitting Impact |
+|-----------|-----------------|-------------------|
+| `max_depth` | Maximum levels in the tree | Deeper = more complex = higher variance |
+| `min_samples_split` | Minimum samples needed to split a node | Higher = more conservative splits |
+| `min_samples_leaf` | Minimum samples in a leaf node | Higher = smoother predictions |
+| `max_features` | Number of features considered per split | Lower = more randomness, less overfitting |
+
+**How you use it:**
+
+```python
+from sklearn.tree import DecisionTreeClassifier
+
+tree = DecisionTreeClassifier(max_depth=5, random_state=42)
+tree.fit(X_train, y_train)
+predictions = tree.predict(X_test)
+```
+
+**Strengths and weaknesses:**
+
+| Strengths | Weaknesses |
+|-----------|------------|
+| Highly interpretable -- visualize the tree | Prone to overfitting (high variance) without depth limits |
+| Handles numeric and categorical features | Unstable -- small data changes can produce a completely different tree |
+| No feature scaling required | Greedy splits are locally optimal, not globally optimal |
+| Fast to train and predict | Single trees rarely match ensemble performance |
+
+**Where it shows up:**
+- **Healthcare:** Clinical decision support ("if blood pressure > X and age > Y, then high risk")
+- **Finance:** Credit approval rules that auditors can inspect
+- **Operations:** Root cause analysis on manufacturing defect data
+- **Any domain requiring explainability:** Regulatory settings where stakeholders need to trace each prediction to a rule
+
+> **Interview Tip:** A single decision tree with `max_depth=None` is the textbook example of high variance / overfitting. In the course evaluation lecture, it is used as the overfitting counterpart to the high-bias logistic regression model on learning curves. Know that an unrestricted tree memorizes training data (near-perfect train score, poor validation score).
+
+---
+
+## 11. Random Forest
+
+**What it is:**
+An ensemble method that trains many independent decision trees on random subsets of the data and random subsets of features, then combines their predictions by majority vote (classification) or averaging (regression). The "forest" corrects the instability of any single tree.
+
+**The two sources of randomness:**
+
+| Technique | What It Does |
+|-----------|-------------|
+| **Bagging (Bootstrap Aggregating)** | Each tree trains on a random sample drawn with replacement from the training set |
+| **Feature subsampling** | At each split, only a random subset of features is considered (typically `sqrt(n_features)` for classification) |
+
+Together, these decorrelate the trees so their errors cancel out rather than compound.
+
+**Why it matters:**
+Random Forest is the standard "step up" from linear models for tabular data. It handles nonlinear relationships, interactions between features, and mixed feature types with minimal preprocessing. In the course, it is the model trained via Script Mode on Friday and later compared to XGBoost in Week 2.
+
+**Key hyperparameters:**
+
+| Parameter | What It Controls | Default |
+|-----------|-----------------|---------|
+| `n_estimators` | Number of trees in the forest | 100 |
+| `max_depth` | Maximum depth of each tree | None (fully grown) |
+| `max_features` | Features considered per split | `sqrt(n_features)` for classification |
+| `min_samples_leaf` | Minimum samples in a leaf | 1 |
+| `random_state` | Seed for reproducibility | None |
+
+**How you use it:**
+
+```python
+from sklearn.ensemble import RandomForestClassifier
+
+rf = RandomForestClassifier(
+    n_estimators=100,
+    max_depth=None,
+    random_state=42
+)
+rf.fit(X_train, y_train)
+predictions = rf.predict(X_test)
+probabilities = rf.predict_proba(X_test)[:, 1]
+```
+
+**Feature importance:** Random Forest provides built-in feature importance scores based on how much each feature contributes to reducing impurity across all trees.
+
+```python
+importances = rf.feature_importances_
+```
+
+**Strengths and weaknesses:**
+
+| Strengths | Weaknesses |
+|-----------|------------|
+| Much more stable than a single tree (lower variance) | Less interpretable than a single tree (100 trees are hard to visualize) |
+| Resistant to overfitting with enough trees | Slower to train/predict than a single tree or linear model |
+| No feature scaling required | Each tree is independent, so it cannot correct systematic errors (unlike boosting) |
+| Good out-of-the-box performance | Can struggle with very high-dimensional sparse data |
+| Built-in feature importance | Memory-heavy for very large forests |
+
+**Random Forest vs Logistic Regression (decision framework):**
+
+| Factor | Logistic Regression | Random Forest |
+|--------|--------------------:|:--------------|
+| Relationship type | Linear | Nonlinear, interactions |
+| Interpretability | Coefficients | Feature importance (less direct) |
+| Preprocessing | Needs scaling, encoding | Minimal |
+| Speed | Very fast | Moderate |
+| When to pick | Baseline, interpretability, linear signal | Nonlinear signal, mixed features, "next step" after linear plateau |
+
+**Where it shows up:**
+- **Finance:** Fraud detection (the course's FraudShield scenario uses it as the primary Script Mode model)
+- **Healthcare:** Predicting patient outcomes from mixed clinical features
+- **E-commerce:** Customer churn prediction, recommendation ranking
+- **Environmental science:** Land cover classification from satellite imagery features
+- **Any tabular ML competition:** Random Forest is a reliable strong baseline before trying gradient boosting
+
+**How it connects to the rest of the course:**
+In Week 2, the course compares Random Forest (trained via Script Mode) to XGBoost (trained as a SageMaker built-in algorithm). XGBoost typically outperforms Random Forest because it uses **sequential boosting** -- each new tree corrects the errors of the ensemble so far -- while Random Forest trains independent trees in parallel. This is the key distinction between **bagging** (Random Forest) and **boosting** (XGBoost, LightGBM, CatBoost).
+
+> **Interview Tip:** Know the bagging vs boosting distinction cold. "Random Forest trains many independent trees on bootstrap samples and averages them (bagging). XGBoost trains trees sequentially where each new tree focuses on the mistakes of the previous ensemble (boosting). Bagging reduces variance; boosting reduces bias." This comparison comes up constantly.
+
+---
+
+## 12. Key Tools (Quick Reference)
 
 | Tool | Role | Why You Use It |
 |------|------|----------------|
@@ -1469,3 +1608,6 @@ With teacher forcing, the decoder always sees correct previous tokens during tra
 | **FC Layer Params** | m * n + n | Parameters for a dense layer (m inputs, n outputs) |
 | **R-squared** | 1 - (SS_res / SS_tot) | Variance explained by regression |
 | **FPR** | FP / (FP + TN) | False Positive Rate (ROC x-axis) |
+| **Gini Impurity** | 1 - sum(p_i^2) for each class i | Decision tree split criterion (0 = pure) |
+| **Information Gain** | Entropy(parent) - weighted avg Entropy(children) | Entropy-based split criterion |
+| **RF default max_features** | sqrt(n_features) for classification | Features considered per split in Random Forest |

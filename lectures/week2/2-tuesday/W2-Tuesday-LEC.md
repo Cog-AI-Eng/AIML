@@ -213,7 +213,7 @@ Raw Data --> Import --> Transform --> Analyze --> Export
 
 ---
 
-## STEP 8 -- Canvas: No-Code Machine Learning (10 minutes)
+## STEP 8 -- Canvas: No-Code Machine Learning (5 minutes)
 
 **Pacing: conceptual with notebook markdown. Canvas runs as a standalone Studio app.**
 
@@ -227,6 +227,35 @@ Key points:
 - Limitations: less control, limited model customization, no custom containers
 
 > "Think of Canvas as Autopilot with a friendlier interface and fewer knobs. If your stakeholder at FraudShield wants to experiment with different target variables or data subsets without waiting for the ML team, Canvas lets them do that safely."
+
+---
+
+## STEP 8b -- Canvas Walkthrough: Quick Build on FraudShield Data (15 minutes)
+
+**Pacing: instructor-led walkthrough using the step-by-step guide in the notebook. Walk through each step on screen while associates follow along. The Quick Build itself takes 2-15 minutes -- use that wait time for the Canvas vs Autopilot comparison discussion (Step 9).**
+
+> "Let us actually use Canvas. We are going to build a fraud detection model without writing a single line of code. Follow the walkthrough in the notebook."
+
+Walk through the notebook's Canvas walkthrough cell:
+
+1. **Launch Canvas** from the Studio Domain (warn: first launch can take several minutes to provision)
+2. **Import the FraudShield CSV** from S3 -- same data they ingested into Feature Store earlier
+3. **Create a new model** -- name it `fraudshield-canvas-model`, select Predictive analysis
+4. **Select target column** -- `is_fraud` or `target`. Point out that Canvas auto-detects column types
+5. **Run Quick Build** -- click the button and note the time estimate
+
+> "While Quick Build trains, look at the notebook's Canvas vs Autopilot comparison. We will come back to the results."
+
+6. **Review model analysis** once Quick Build completes:
+   - Overall accuracy
+   - Column impact chart -- ask: "How does this compare to the feature importance from Monday's Random Forest?"
+   - Class-level metrics if available
+7. **Generate predictions** -- single prediction with high-risk values, then low-risk values. Compare confidence scores.
+8. **Clean up** -- delete model and dataset from Canvas
+
+> "You just built a fraud detection model in under 15 minutes with zero code. The trade-off is control. You cannot choose the algorithm, customize preprocessing, or plug this into a pipeline. But for a product manager who needs a quick answer to 'does this data have signal?' -- this is the right tool."
+
+**Timing note:** If Canvas provisioning or Quick Build takes longer than expected, move to Step 9 (comparison discussion) during the wait and return to results when ready. Do not let provisioning delays stall the lecture.
 
 ---
 
@@ -253,7 +282,7 @@ Key points:
 
 ---
 
-## STEP 10 -- Autopilot AutoML on Fraud Data (23 minutes)
+## STEP 10 -- Autopilot AutoML on Fraud Data (15 minutes)
 
 **Pacing: live code. The Autopilot job itself takes time, so launch it and discuss while it runs.**
 
